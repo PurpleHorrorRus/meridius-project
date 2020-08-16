@@ -55,12 +55,30 @@
 <script>
 import Feature from "~/components/Meridius/Feature";
 
-import MeridiusIcon from "~/static/Meridius/icon.png";
-import MeridiusScreenshot from "~/static/Meridius/Meridius.png";
+import MeridiusIcon from "~/static/meridius/icon.png";
+import MeridiusScreenshot from "~/static/meridius/Meridius.png";
 
 export default {
     components: {
         Feature
+    },
+    head () {
+        return {
+            title: "Meridius - музыкальный плеер для ВКонтакте",
+            meta: [
+                { hid: "description", name: "description", content: "Meridius - music player for VK.com" },
+                { 
+                    hid: "keywords", 
+                    name: "keywords", 
+                    content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
+                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте" 
+                }
+            ],
+            link: [
+                { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" }
+            ]
+        };
+        
     },
     data: () => ({
         features: [
