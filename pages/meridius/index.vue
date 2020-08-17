@@ -62,23 +62,21 @@ export default {
     components: {
         Feature
     },
-    head () {
-        return {
-            title: "Meridius - музыкальный плеер для ВКонтакте",
-            meta: [
-                { hid: "description", name: "description", content: "Meridius - music player for VK.com" },
-                { 
-                    hid: "keywords", 
-                    name: "keywords", 
-                    content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
-                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте" 
-                }
-            ],
-            link: [
-                { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
-                { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
-            ]
-        };
+    head: {
+        title: "Meridius - музыкальный плеер для ВКонтакте",
+        meta: [
+            { hid: "description", name: "description", content: "Meridius - музыкальный плеер для ВК" },
+            { 
+                hid: "keywords", 
+                name: "keywords", 
+                content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
+                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК" 
+            }
+        ],
+        link: [
+            { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
+            { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
+        ]
         
     },
     data: () => ({

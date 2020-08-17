@@ -10,7 +10,13 @@ module.exports = {
         meta: [
             { charset: "utf-8" },
             { name: "viewport", content: "width=device-width, initial-scale=1" },
-            { hid: "description", name: "description", content: "A personal website" }
+            { hid: "description", name: "description", content: "Meridius - музыкальный плеер для ВК" },
+            { 
+                hid: "keywords", 
+                name: "keywords", 
+                content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
+                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК" 
+            }
         ],
         link: [
             { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
