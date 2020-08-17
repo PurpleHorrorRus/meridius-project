@@ -56,6 +56,7 @@ module.exports = {
         ]
     ],
     sitemap: {
+        hostname: "https://purplehorrorrus.github.io",
         routes: [
             {
                 url: "/meridius",
