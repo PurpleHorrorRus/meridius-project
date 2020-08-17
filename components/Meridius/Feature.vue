@@ -27,7 +27,7 @@ export default {
 
     margin-bottom: 10px;
 
-    font-size: 16pt;
+    font-size: 14pt;
 
     .feature-label {
         grid-area: label;

@@ -8,7 +8,7 @@
             <div id="meridius">
                 <div id="description">
                     <div id="meridius-logo">
-                        <img id="meridius-icon" :src="MeridiusIcon" alt="Meridius icon">
+                        <img id="meridius-icon" src="/meridius/icon.png" alt="Meridius icon">
                         <h2 id="logo" v-text="'Meridius'" />
                     </div>
                     <h3 id="description-text" v-text="'Современный, красивый, многофункциональный \
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <img id="MeridiusScreenshot" :src="MeridiusScreenshot" alt="Meridius screenshot">
+                <img id="MeridiusScreenshot" src="/meridius/Meridius.png" alt="Meridius screenshot">
             </div>
         </div>
         <div id="features">
@@ -55,9 +55,6 @@
 <script>
 import Feature from "~/components/Meridius/Feature";
 
-import MeridiusIcon from "~/static/meridius/icon.png";
-import MeridiusScreenshot from "~/static/meridius/Meridius.png";
-
 export default {
     components: {
         Feature
@@ -65,12 +62,36 @@ export default {
     head: {
         title: "Meridius - музыкальный плеер для ВКонтакте",
         meta: [
-            { hid: "description", name: "description", content: "Meridius - музыкальный плеер для ВК" },
+            { 
+                hid: "description", 
+                name: "description", 
+                content: "Meridius - бесплатный современный музыкальный плеер для социальной сети ВКонтакте" 
+            },
             { 
                 hid: "keywords", 
                 name: "keywords", 
                 content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
                     музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК" 
+            },
+            {
+                hid: "og:title",
+                property: "og:title",
+                content: "Meridius - мы любим музыку"
+            },
+            {
+                hid: "og:description",
+                property: "og:description",
+                content: "Meridius - бесплатный современный музыкальный плеер для социальной сети ВКонтакте"
+            },
+            {
+                hid: "og:image",
+                property: "og:image",
+                content: "/meridius/MeridiusPreview.png"
+            },
+            {
+                hid: "og:url",
+                property: "og:url",
+                content: "/meridius"
             }
         ],
         link: [
@@ -153,14 +174,6 @@ export default {
             }
         ]
     }),
-    computed: {
-        MeridiusIcon () {
-            return MeridiusIcon;
-        },
-        MeridiusScreenshot () {
-            return MeridiusScreenshot;
-        }
-    },
     jsonld () {
         const items = this.seoItems.map((item, index) => ({
             "@type": "ListItem",
