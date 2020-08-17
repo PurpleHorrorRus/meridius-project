@@ -22,7 +22,7 @@ html, body, #__nuxt, #__layout {
     box-sizing: border-box;
 }
 
-span {
+span, h1, h2, h3, h4, h5, h6 {
     color: #fff;
     user-select: none;
 }

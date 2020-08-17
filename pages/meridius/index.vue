@@ -1,17 +1,17 @@
 <template>
     <div id="container">
         <div id="header">
-            <span id="logo" v-text="'Meridius'" />
+            <h1 id="logo" v-text="'Meridius'" />
             <span id="description" v-text="'Музыкальный плеер для ВКонтакте'" />
         </div>
         <div id="content">
             <div id="meridius">
                 <div id="description">
                     <div id="meridius-logo">
-                        <img id="meridius-icon" :src="MeridiusIcon">
-                        <span id="logo" v-text="'Meridius'" />
+                        <img id="meridius-icon" :src="MeridiusIcon" alt="Meridius icon">
+                        <h2 id="logo" v-text="'Meridius'" />
                     </div>
-                    <span id="description-text" v-text="'Современный, красивый, многофункциональный \
+                    <h3 id="description-text" v-text="'Современный, красивый, многофункциональный \
                     и бесплатный музыкальный плеер для социальной сети ВКонтакте'" />
                     <a 
                         id="download-link" 
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <img id="MeridiusScreenshot" :src="MeridiusScreenshot">
+                <img id="MeridiusScreenshot" :src="MeridiusScreenshot" alt="Meridius screenshot">
             </div>
         </div>
         <div id="features">
@@ -75,12 +75,19 @@ export default {
                 }
             ],
             link: [
-                { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" }
+                { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
+                { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
             ]
         };
         
     },
     data: () => ({
+        seoItems: [
+            {
+                url: "https://purplehorrorrus.github.io/meridius/",
+                text: "Meridius - современный музыкальный плеер для ВКонтакте"
+            }
+        ],
         features: [
             {
                 icon: ["fas", "dollar-sign"],
@@ -156,6 +163,22 @@ export default {
         MeridiusScreenshot () {
             return MeridiusScreenshot;
         }
+    },
+    jsonld () {
+        const items = this.seoItems.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+                "@id": item.url,
+                name: item.text,
+            },
+        }));
+
+        return {
+            "@context": "http://schema.org",
+            "@type": "MeridiusList",
+            itemListElement: items
+        };
     }
 };
 </script>
@@ -216,6 +239,7 @@ export default {
                     }
 
                     #logo {
+                        display: inline-block;
                         font-family: Acme;
                         font-size: 24pt;
                         vertical-align: middle;

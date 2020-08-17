@@ -2,6 +2,9 @@ module.exports = {
     mode: "spa",
     target: "static",
     head: {
+        htmlAttrs: {
+            lang: "ru"
+        },
         title: "PurpleHorror",
         meta: [
             { charset: "utf-8" },
@@ -24,7 +27,19 @@ module.exports = {
             );
         }
     },
+    buildModules: [
+        "@nuxtjs/google-analytics"
+    ],
+    googleAnalytics: {
+        id: "UA-157148734-2",
+        debug: {
+            enabled: false,
+            sendHitTask: true
+        }
+    },
+    plugins: ["~plugins/jsonld"],
     modules: [
+        "@nuxtjs/sitemap",
         [
             "nuxt-fontawesome", {
                 imports: [
@@ -39,6 +54,16 @@ module.exports = {
                 ]
             }
         ]
-    ]
+    ],
+    sitemap: {
+        routes: [
+            {
+                url: "/meridius",
+                changefreq: "daily",
+                priority: 1,
+                lastmod: new Date()
+            }
+        ]
+    }
 };
 
