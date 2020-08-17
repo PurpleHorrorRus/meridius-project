@@ -66,7 +66,7 @@ module.exports = {
         hostname: "https://purplehorrorrus.github.io",
         routes: [
             {
-                url: "/meridius",
+                url: "/meridius/",
                 changefreq: "daily",
                 priority: 1,
                 lastmod: new Date()
