@@ -77,7 +77,6 @@ export default {
             { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
             { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
         ]
-        
     },
     data: () => ({
         seoItems: [
