@@ -5534,7 +5534,7 @@ nuxt-jsonld@^1.4.10:
   resolved "https://registry.yarnpkg.com/nuxt-jsonld/-/nuxt-jsonld-1.4.10.tgz#7a69b741c6c51a9de1759db1661bcb2ec1f3f481"
   integrity sha512-NaBFp+CDrgCqNImGJxo6N74hT3Sun0d5OHRvf/XdjgtnGLi0PHZV63FRc00SEHcJ0sp22kUXfK4sMhipUU25hQ==
 
-nuxt@^2.0.0:
+nuxt@2.14.3:
   version "2.14.3"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.14.3.tgz#1e1fb762d407dc275253360b87f3257c609b4dfd"
   integrity sha512-7f5adPiIkZvv5Fu7tKhHuKdMv4IvSbBC1sbuBcgjtRedu4rP/tQPL4/8PZcEUieolcfwaN+WGPNz3sMGyPTLzg==
