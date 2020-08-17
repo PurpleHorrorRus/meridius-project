@@ -6,11 +6,11 @@ module.exports = {
         htmlAttrs: {
             lang: "ru"
         },
-        title: "PurpleHorror",
+        title: "InfiniteHorror",
         meta: [
             { charset: "utf-8" },
             { name: "viewport", content: "width=device-width, initial-scale=1" },
-            { hid: "description", name: "description", content: "Meridius - музыкальный плеер для ВК" },
+            { hid: "description", name: "description", content: "Meridius - музыкальный плеер для ВКонтакте" },
             { 
                 hid: "keywords", 
                 name: "keywords", 
