@@ -1,6 +1,7 @@
 module.exports = {
     mode: "spa",
     target: "static",
+    telemetry: false,
     head: {
         htmlAttrs: {
             lang: "ru"
