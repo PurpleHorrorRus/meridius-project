@@ -15,7 +15,7 @@
                     и бесплатный музыкальный плеер для социальной сети ВКонтакте'" />
                     <a 
                         id="download-link" 
-                        href="https://github.com/PurpleHorrorRus/Meridius/releases/download/v1.5.6/meridius-1.5.6.exe">
+                        href="https://github.com/PurpleHorrorRus/Meridius/releases/download/v1.6.0/meridius-1.6.0.exe">
                         <button id="download-button" v-text="'Скачать для Windows'" />
                     </a>
                     <div id="warn">
