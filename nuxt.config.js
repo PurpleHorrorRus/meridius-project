@@ -3,6 +3,9 @@ module.exports = {
     target: "static",
     ssr: false,
     telemetry: false,
+    router: {
+        base: "/purplehorrorrus.github.io/"
+    },
     head: {
         htmlAttrs: {
             lang: "ru"
