@@ -158,6 +158,11 @@ export default {
                 text: "Вывод музыки на стрим через OBS Studio или любую другую программу"
             },
             {
+                icon: ["fab", "youtube"],
+                color: "white",
+                text: "Импорт треков и плейлистов из YouTube"
+            },
+            {
                 icon: ["fas", "comment-dots"],
                 color: "white",
                 text: "Постоянная поддержка и связь с разработчиком"
@@ -173,23 +178,7 @@ export default {
                 text: "И многое другое"
             }
         ]
-    }),
-    jsonld () {
-        const items = this.seoItems.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            item: {
-                "@id": item.url,
-                name: item.text,
-            },
-        }));
-
-        return {
-            "@context": "http://schema.org",
-            "@type": "MeridiusList",
-            itemListElement: items
-        };
-    }
+    })
 };
 </script>
 

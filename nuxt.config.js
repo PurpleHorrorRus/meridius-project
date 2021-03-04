@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-undef
 module.exports = {
-    mode: "spa",
     target: "static",
+    ssr: false,
     telemetry: false,
     head: {
         htmlAttrs: {
@@ -44,7 +45,6 @@ module.exports = {
             sendHitTask: true
         }
     },
-    plugins: ["~plugins/jsonld"],
     modules: [
         "@nuxtjs/sitemap",
         [
