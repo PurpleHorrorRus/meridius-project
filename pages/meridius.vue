@@ -175,7 +175,7 @@ export default {
             {
                 hid: "og:image",
                 property: "og:image",
-                content: "/meridius/MeridiusPreview.png"
+                content: "~/static/meridius/MeridiusPreview.png"
             },
             {
                 hid: "og:url",
