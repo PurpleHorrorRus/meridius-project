@@ -3,7 +3,7 @@ module.exports = {
     target: "static",
     telemetry: false,
     router: {
-        base: "/"
+        base: process.env.NODE_ENV === "production" ? "/purplehorrrorrus.github.io/" : "/"
     },
     head: {
         htmlAttrs: {
