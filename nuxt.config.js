@@ -1,11 +1,7 @@
 // eslint-disable-next-line no-undef
 module.exports = {
     target: "static",
-    ssr: true,
     telemetry: false,
-    router: {
-        base: process.env.NODE_ENV === "production" ? "/purplehorrrorrus.github.io/" : "/"
-    },
     head: {
         htmlAttrs: {
             lang: "ru"

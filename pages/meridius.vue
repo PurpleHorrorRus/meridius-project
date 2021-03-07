@@ -14,11 +14,8 @@
                     <h3 id="description-text" v-text="'Современный, красивый, многофункциональный \
                     и бесплатный музыкальный плеер для социальной сети ВКонтакте'"
                     />
-                    <a 
-                        id="download-link" 
-                        href="https://github.com/PurpleHorrorRus/Meridius/releases/download/v1.6.3/meridius-1.6.3.exe"
-                    >
-                        <button id="download-button" v-text="'Скачать для Windows'" />
+                    <a id="download-link" :href="link">
+                        <SolidButton :label="'Скачать для Windows'" />
                     </a>
                     <div id="warn">
                         <div id="contact">
@@ -40,29 +37,34 @@
         </div>
         <div id="features">
             <span id="features-label" v-text="'Особенности'" />
-            <Feature
-                v-for="(feature, index) of features"
-                :key="index"
-                :feature="feature"
-            />
+            <div id="features-chunks">
+                <div 
+                    v-for="(featureChunk, index) of featuresSplitted"
+                    :key="index"
+                    class="features-chunk"
+                >
+                    <Feature
+                        v-for="feature of featureChunk"
+                        :key="feature.text"
+                        :feature="feature"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import SolidButton from "~/components/Meridius/SolidButton";
 import Feature from "~/components/Meridius/Feature";
 
 export default {
     components: {
+        SolidButton,
         Feature
     },
     data: () => ({
-        seoItems: [
-            {
-                url: "https://purplehorrorrus.github.io/meridius",
-                text: "Meridius - современный музыкальный плеер для ВКонтакте"
-            }
-        ],
+        version: "1.6.3",
         features: [
             {
                 icon: ["fas", "dollar-sign"],
@@ -83,6 +85,11 @@ export default {
                 icon: ["fas", "pencil-ruler"],
                 color: "white",
                 text: "Современный красивый и понятный дизайн, выбор тем"
+            },
+            {
+                icon: ["fas", "paint-brush"],
+                color: "white",
+                text: "Поддержка цветовых схем"
             },
             {
                 icon: ["fas", "music"],
@@ -158,7 +165,7 @@ export default {
             {
                 hid: "og:title",
                 property: "og:title",
-                content: "Meridius - мы любим музыку"
+                content: "Meridius - музыкальный плеер для ВКонтакте"
             },
             {
                 hid: "og:description",
@@ -180,6 +187,19 @@ export default {
             { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
             { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius" }
         ]
+    },
+    computed: {
+        featuresSplitted () {
+            return this.chunk(this.features, Math.floor(this.features.length / 2) + 1);
+        },
+        link () {
+            return `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${this.version}/meridius-${this.version}.exe`;
+        }
+    },
+    methods: {
+        chunk (arr, size) {
+            return arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
+        }
     }
 };
 </script>
@@ -304,22 +324,6 @@ export default {
                 #download-link {
                     text-decoration: none;
                 }
-
-                #download-button {
-                    display: block;
-                    margin-top: 20px;
-                    padding: 10px;
-
-                    background: #fff;
-                    
-                    font-family: Roboto;
-                    font-size: 16pt;
-                    color: rgb(117, 117, 252);
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
             }
 
             #MeridiusScreenshot {
@@ -336,9 +340,18 @@ export default {
 
     #features {
         grid-area: features;
+
+        width: 100%;
+
         margin: auto;
         margin-top: 0px;
         // padding: 15px;
+
+        #features-chunks {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
         #features-label {
             display: block;
