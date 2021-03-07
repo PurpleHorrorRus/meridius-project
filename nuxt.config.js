@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-undef
 module.exports = {
     target: "static",
-    ssr: false,
+    ssr: true,
     telemetry: false,
     router: {
-        base: "/purplehorrorrus.github.io/"
+        base: process.env.NODE_ENV === "production" ? "/purplehorrrorrus.github.io/" : "/"
     },
     head: {
         htmlAttrs: {
@@ -60,7 +60,7 @@ module.exports = {
                     {
                         set: "@fortawesome/free-brands-svg-icons",
                         icons: ["fab"]
-                    },
+                    }
                 ]
             }
         ]
