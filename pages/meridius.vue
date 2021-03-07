@@ -58,7 +58,6 @@
 import SolidButton from "~/components/Meridius/SolidButton";
 import Feature from "~/components/Meridius/Feature";
 
-import favicon from "~/assets/meridius/favicon.ico";
 import preview from "~/assets/meridius/MeridiusPreview.png";
 
 export default {
@@ -187,7 +186,7 @@ export default {
             }
         ],
         link: [
-            { rel: "icon", type: "image/x-icon", href: favicon },
+            { rel: "icon", type: "image/x-icon", href: "meridius_favicon.ico" },
             { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius" }
         ]
     },
