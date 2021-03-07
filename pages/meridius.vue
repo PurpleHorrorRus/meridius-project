@@ -58,7 +58,7 @@
 import SolidButton from "~/components/Meridius/SolidButton";
 import Feature from "~/components/Meridius/Feature";
 
-import preview from "~/assets/meridius/MeridiusPreview.png";
+import preview from "~/assets/meridius/icon.png";
 
 export default {
     components: {
