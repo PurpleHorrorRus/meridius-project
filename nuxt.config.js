@@ -2,6 +2,9 @@
 module.exports = {
     target: "static",
     telemetry: false,
+    router: {
+        base: "/"
+    },
     head: {
         htmlAttrs: {
             lang: "ru"
