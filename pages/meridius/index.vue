@@ -8,7 +8,7 @@
             <div id="meridius">
                 <div id="description">
                     <div id="meridius-logo">
-                        <img id="meridius-icon" src="/meridius/icon.ico" alt="Meridius icon">
+                        <img id="meridius-icon" src="~/assets/meridius/icon.png" alt="Meridius icon">
                         <h2 id="logo" v-text="'Meridius'" />
                     </div>
                     <h3 id="description-text" v-text="'Современный, красивый, многофункциональный \
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <img id="MeridiusScreenshot" src="/meridius/Meridius.png" alt="Meridius screenshot">
+                <img id="MeridiusScreenshot" src="~/assets/meridius/Meridius.png" alt="Meridius screenshot">
             </div>
         </div>
         <div id="features">
@@ -184,7 +184,7 @@ export default {
             }
         ],
         link: [
-            { rel: "icon", type: "image/x-icon", href: "/meridius/favicon.ico" },
+            { rel: "icon", type: "image/x-icon", href: "~/assets/meridius/favicon.ico" },
             { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius" }
         ]
     },
@@ -193,6 +193,7 @@ export default {
             return this.chunk(this.features, Math.floor(this.features.length / 2) + 1);
         },
         link () {
+            // eslint-disable-next-line max-len
             return `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${this.version}/meridius-${this.version}.exe`;
         }
     },
