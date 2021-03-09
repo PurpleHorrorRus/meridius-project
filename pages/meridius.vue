@@ -66,7 +66,7 @@ export default {
         Feature
     },
     data: () => ({
-        version: "1.6.3",
+        version: "1.6.4",
         features: [
             {
                 icon: ["fas", "dollar-sign"],
@@ -187,7 +187,7 @@ export default {
         ],
         link: [
             { rel: "icon", type: "image/x-icon", href: "meridius_favicon.ico" },
-            { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius" }
+            { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
         ]
     },
     computed: {
