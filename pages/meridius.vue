@@ -66,7 +66,7 @@ export default {
         Feature
     },
     data: () => ({
-        version: "1.6.4",
+        version: "1.6.6",
         features: [
             {
                 icon: ["fas", "dollar-sign"],
