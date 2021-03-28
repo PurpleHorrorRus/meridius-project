@@ -86,7 +86,7 @@ export default {
             {
                 icon: ["fas", "pencil-ruler"],
                 color: "white",
-                text: "Современный красивый и понятный дизайн, выбор тем"
+                text: "Современный красивый и понятный дизайн"
             },
             {
                 icon: ["fas", "paint-brush"],
