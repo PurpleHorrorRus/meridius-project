@@ -2,10 +2,6 @@
 module.exports = {
     target: "static",
     telemetry: false,
-    router: {
-        base: process.env.NODE_ENV === "production" ? "/purplehorrrorrus.github.io/" : "/",
-        trailingSlash: false
-    },
     head: {
         htmlAttrs: {
             lang: "ru"
@@ -77,4 +73,3 @@ module.exports = {
         ]
     }
 };
-
