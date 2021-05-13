@@ -9,10 +9,14 @@
                 <div id="description">
                     <div id="meridius-logo">
                         <img id="meridius-icon" src="~/assets/meridius/icon.png" alt="Meridius icon">
-                        <h2 id="logo" v-text="'Meridius'" />
+                        <h2 id="logo" v-text="`Meridius (v${version})`" />
                     </div>
-                    <h3 id="description-text" v-text="'Современный, красивый, многофункциональный \
-                    и бесплатный музыкальный плеер для социальной сети ВКонтакте'"
+                    <h3
+                        id="description-text"
+                        v-text="
+                            'Современный, красивый, многофункциональный \
+                    и бесплатный музыкальный плеер для социальной сети ВКонтакте'
+                        "
                     />
                     <a id="download-link" :href="link">
                         <SolidButton :label="'Скачать для Windows'" />
@@ -32,22 +36,18 @@
                         </div>
                     </div>
                 </div>
-                <img id="MeridiusScreenshot" src="~/assets/meridius/Meridius.png" alt="Meridius screenshot">
+                <img
+                    id="MeridiusScreenshot"
+                    src="https://raw.githubusercontent.com/PurpleHorrorRus/Meridius/master/screenshots/0.png"
+                    alt="Meridius screenshot"
+                >
             </div>
         </div>
         <div id="features">
             <span id="features-label" v-text="'Особенности'" />
             <div id="features-chunks">
-                <div 
-                    v-for="(featureChunk, index) of featuresSplitted"
-                    :key="index"
-                    class="features-chunk"
-                >
-                    <Feature
-                        v-for="feature of featureChunk"
-                        :key="feature.text"
-                        :feature="feature"
-                    />
+                <div v-for="(featureChunk, index) of featuresSplitted" :key="index" class="features-chunk">
+                    <Feature v-for="feature of featureChunk" :key="feature.text" :feature="feature" />
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ export default {
         Feature
     },
     data: () => ({
-        version: "1.7.0",
+        version: "1.7.2",
         features: [
             {
                 icon: ["fas", "dollar-sign"],
@@ -153,16 +153,17 @@ export default {
     head: {
         title: "Meridius - музыкальный плеер для ВКонтакте",
         meta: [
-            { 
-                hid: "description", 
-                name: "description", 
-                content: "Meridius - бесплатный современный музыкальный плеер для социальной сети ВКонтакте" 
+            {
+                hid: "description",
+                name: "description",
+                content: "Meridius - бесплатный современный музыкальный плеер для социальной сети ВКонтакте"
             },
-            { 
-                hid: "keywords", 
-                name: "keywords", 
-                content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
-                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК" 
+            {
+                hid: "keywords",
+                name: "keywords",
+                content:
+                    "Meridius, Music player, VK, vk.com, ВКонтакте, \
+                    музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК"
             },
             {
                 hid: "og:title",
@@ -191,16 +192,16 @@ export default {
         ]
     },
     computed: {
-        featuresSplitted () {
+        featuresSplitted() {
             return this.chunk(this.features, Math.floor(this.features.length / 2) + 1);
         },
-        link () {
+        link() {
             // eslint-disable-next-line max-len
             return `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${this.version}/meridius-${this.version}.exe`;
         }
     },
     methods: {
-        chunk (arr, size) {
+        chunk(arr, size) {
             return arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
         }
     }
@@ -234,7 +235,7 @@ export default {
 
         #description {
             display: block;
-            
+
             color: #7e7e7e;
             font-size: 10pt;
         }
@@ -242,7 +243,7 @@ export default {
 
     #content {
         grid-area: content;
-        
+
         background-color: #111111;
         border-bottom: 1px solid #4f4f4f;
 
@@ -279,14 +280,16 @@ export default {
                     * {
                         user-select: none;
                     }
-                    
-                    span, a, svg {
+
+                    span,
+                    a,
+                    svg {
                         color: #6d6d6d;
                     }
 
                     #contact {
                         margin-top: 10px;
-                        
+
                         svg {
                             font-size: 12pt;
                             vertical-align: middle;
@@ -298,13 +301,13 @@ export default {
 
                             &#vk-icon {
                                 &:hover {
-                                    color:rgb(117, 117, 252);
+                                    color: rgb(117, 117, 252);
                                 }
                             }
 
                             &#github-icon {
                                 &:hover {
-                                    color:#fff;
+                                    color: #fff;
                                 }
                             }
 
