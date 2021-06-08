@@ -1,0 +1,82 @@
+[
+    {
+        "icon": ["fas", "dollar-sign"],
+        "color": "red",
+        "text": "Приложение абсолютно бесплатное"
+    },
+    {
+        "icon": ["fas", "microchip"],
+        "color": "white",
+        "text": "Низкое потребление системных ресурсов"
+    },
+    {
+        "icon": ["fas", "tachometer-alt"],
+        "color": "white",
+        "text": "Быстрая работа приложения"
+    },
+    {
+        "icon": ["fas", "pencil-ruler"],
+        "color": "white",
+        "text": "Современный красивый и понятный дизайн"
+    },
+    {
+        "icon": ["fas", "paint-brush"],
+        "color": "white",
+        "text": "Поддержка цветовых схем"
+    },
+    {
+        "icon": ["fas", "music"],
+        "color": "white",
+        "text": "Лёгкое управление и быстрый доступ к аудиозаписям и плейлистам"
+    },
+    {
+        "icon": ["fas", "search"],
+        "color": "white",
+        "text": "Поиск пользователей, сообществ, исполнителей, плейлистов и аудиозаписей"
+    },
+    {
+        "icon": ["fas", "arrow-down"],
+        "color": "white",
+        "text": "Скачивание аудио и целых плейлистов на компьютер"
+    },
+    {
+        "icon": ["fas", "window-maximize"],
+        "color": "white",
+        "text": "Мини-плеер, который выводится поверх окон"
+    },
+    {
+        "icon": ["fas", "keyboard"],
+        "color": "white",
+        "text": "Поддержка горячих клавиш"
+    },
+    {
+        "icon": ["fas", "sliders-h"],
+        "color": "white",
+        "text": "Встроенный эквалайзер с предустановками"
+    },
+    {
+        "icon": ["fas", "broadcast-tower"],
+        "color": "white",
+        "text": "Вывод музыки на стрим через OBS Studio или любую другую программу"
+    },
+    {
+        "icon": ["fab", "youtube"],
+        "color": "white",
+        "text": "Импорт треков и плейлистов из YouTube"
+    },
+    {
+        "icon": ["fas", "comment-dots"],
+        "color": "white",
+        "text": "Постоянная поддержка и связь с разработчиком"
+    },
+    {
+        "icon": ["fas", "server"],
+        "color": "white",
+        "text": "Встроенный веб-сервер"
+    },
+    {
+        "icon": ["fas", "ellipsis-h"],
+        "color": "white",
+        "text": "И многое другое"
+    }
+]
