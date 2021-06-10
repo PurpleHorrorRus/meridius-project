@@ -1,8 +1,9 @@
 <template>
     <div id="main-page">
-        <img id="main-page-Jestress" src="~/assets/images/Jestress.png">
         <div id="main-page-container">
-            <div id="main-page-container-left" />
+            <div id="main-page-container-left">
+                <img id="main-page-Jestress" src="~/assets/images/Jestress.png">
+            </div>
             <div id="main-page-container-content">
                 <Header />
                 <Projects />
@@ -71,12 +72,16 @@ body {
 
         &-left {
             grid-area: left;
+
+            display: flex;
         }
 
         &-content {
             grid-area: content;
 
             background: rgb(20, 20, 19, 0.9);
+
+            overflow-y: auto;
 
             .category {
                 margin-bottom: 5px;
@@ -97,10 +102,9 @@ body {
     }
 
     &-Jestress {
-        position: absolute;
-        bottom: 0px;
+        align-self: flex-end;
 
-        height: 70%;
+        width: 100%;
     }
 }
 </style>
