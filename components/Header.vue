@@ -4,12 +4,21 @@
             <span id="main-page-container-content-header-name-Infinite" v-text="'Infinite'" />
             <span id="main-page-container-content-header-name-Horror" v-text="'Horror'" />
         </div>
-        <span id="main-page-container-content-header-welcome" v-text="'Welcome to the Page'" />
+        <div id="main-page-container-content-header-welcome">
+            <span id="main-page-container-content-header-welcome-text" v-text="'Welcome to the Page'" />
+            <span id="main-page-container-content-header-welcome-wtc" v-text="wtc" />
+        </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    computed: {
+        wtc() {
+            return "\"When They Cry...\"";
+        }
+    }
+};
 </script>
 
 <style lang="scss">
@@ -32,7 +41,7 @@ export default {};
         justify-content: center;
         gap: 20px;
 
-        width: 100%;
+        width: 50%;
 
         &-Infinite,
         &-Horror {
@@ -51,9 +60,24 @@ export default {};
     }
 
     &-welcome {
-        font-family: "Arisawa-Kaisho";
-        font-size: 24pt;
-        letter-spacing: -6px;
+        display: flex;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin-top: 10px;
+
+        &-text,
+        &-wtc {
+            font-family: "Arisawa-Kaisho";
+            font-size: 24pt;
+            letter-spacing: -6px;
+            font-weight: 300;
+
+            width: 100%;
+
+            text-align: center;
+        }
     }
 }
 </style>
