@@ -14,7 +14,7 @@
 <script>
 export default {
     data: () => ({
-        version: "1.8.1"
+        version: "1.8.2"
     }),
     methods: {
         link(ext) {
