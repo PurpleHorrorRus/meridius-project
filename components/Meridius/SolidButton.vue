@@ -32,12 +32,12 @@ export default {
     font-size: 9pt;
     text-align: center;
 
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     span {
         cursor: pointer;
     }
-        
+
     &:hover {
         cursor: pointer;
         background: #9c353680;

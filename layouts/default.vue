@@ -1,11 +1,12 @@
 <template>
-    <nuxt/>
+    <nuxt />
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
-
-html, body, #__nuxt, #__layout {
+html,
+body,
+#__nuxt,
+#__layout {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -22,7 +23,13 @@ html, body, #__nuxt, #__layout {
     box-sizing: border-box;
 }
 
-span, h1, h2, h3, h4, h5, h6 {
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #fff;
     user-select: none;
 }
@@ -32,9 +39,10 @@ a {
     width: max-content;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
     margin: 0;
 }
 </style>
-

@@ -38,19 +38,23 @@ export default {
 
         #meridius-icon {
             width: 40px;
+
             vertical-align: middle;
         }
 
         #logo {
             display: inline-block;
+
             font-family: Acme;
             font-size: 24pt;
+
             vertical-align: middle;
         }
     }
 
     &-text {
         display: block;
+
         max-width: 400px;
 
         margin-top: 10px;
